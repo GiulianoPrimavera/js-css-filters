@@ -9,20 +9,18 @@
     background-color: lightblue;
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .row{
-    height: 50%;
     width: 50%;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
+    border: 2px solid red;
 }
 
 .col{
