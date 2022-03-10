@@ -7,6 +7,10 @@ function correctButton(){
     defaultInput.click();
 }
 
+function removeImage(){
+    image.src = "";
+}
+
 //ascolto quando cambia l'input
 defaultInput.addEventListener("change", function(){
     //recupero il file inserito dentro l'input
