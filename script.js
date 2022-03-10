@@ -39,7 +39,45 @@ defaultInput.addEventListener("change", function(){
 
 //******************************************************************
 //*qui metto i controlli per gli input range
+const grayscaleInput = document.querySelector("#grayscale");
+grayscaleInput.addEventListener("change", function(){    
+    image.style.filter += `grayscale(${grayscaleInput.value}%)`;
+});
 
+const saturateInput = document.querySelector("#saturate");
+saturateInput.addEventListener("change", function(){
+    image.style.filter += `saturate(${saturateInput.value}%)`;
+});
+
+const sepiaInput = document.querySelector("#sepia");
+sepiaInput.addEventListener("change", function(){
+    image.style.filter += `sepia(${sepiaInput.value}%)`;
+});
+
+const invertInput = document.querySelector("#invert");
+invertInput.addEventListener("change", function(){
+    image.style.filter += `invert(${invertInput.value}%)`;
+});
+
+const contrastInput = document.querySelector("#contrast");
+contrastInput.addEventListener("change", function(){
+    image.style.filter += `contrast(${contrastInput.value}%)`;
+});
+
+const brightnessInput = document.querySelector("#brightness");
+brightnessInput.addEventListener("change", function(){
+    image.style.filter += `brightness(${brightnessInput.value}%)`;
+});
+
+const blurInput = document.querySelector("#blur");
+blurInput.addEventListener("change", function(){
+    image.style.filter += `blur(${blurInput.value}px)`;
+});
+
+const hueRotateInput = document.querySelector("#hue_rotate");
+hueRotateInput.addEventListener("change", function(){
+    image.style.filter += `hue-rotate(${hueRotateInput.value}deg)`;
+});
 //! qui dentro c'è la soluzione di developer mozzilla
 /* 
     const fileInput = document.querySelector('input[type="file"]');
