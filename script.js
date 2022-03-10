@@ -1,18 +1,29 @@
-let input = document.getElementById("input");
+//! questa è la soluzione di #CodingNepal
+const input = document.getElementById("input");
+const image = document.querySelector("img.preview");
 
+//ascolto quando cambia l'input
 input.addEventListener("change", function(){
+    //recupero il file inserito dentro l'input
     const file = this.files[0];    
-    
-    const reader = new FileReader();
 
-    console.log(reader.result);
+    if(file){
 
-    // reader.onload = function(){
+        //creo una nuova istanza del file reader
+        const reader = new FileReader();
         
-    // }
+        //
+        reader.onload = function(){
+            const result = reader.result;
+            image.src = result;        
+        }
+        reader.readAsDataURL(file);
+    }
+
+    
 })
-//qui dentro c'è la soluzione di developer mozzilla
-/*
+//! qui dentro c'è la soluzione di developer mozzilla
+/* 
     const fileInput = document.querySelector('input[type="file"]');
     const preview = document.querySelector('img.preview');
     const reader = new FileReader();
@@ -42,4 +53,4 @@ input.addEventListener("change", function(){
     }
 
     fileInput.addEventListener('change', handleSelected);
-*/
+ */
