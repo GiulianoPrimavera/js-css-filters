@@ -12,11 +12,15 @@ input.addEventListener("change", function(){
         //creo una nuova istanza del file reader
         const reader = new FileReader();
         
-        //
+        //"the load event is fired when a file has benn read succesfully"
         reader.onload = function(){
+            //recupero il risultato della lettura 
             const result = reader.result;
+            //associo all'"src" dell'immagine il risultato
             image.src = result;        
         }
+        //questo permette al browser di leggere l'immagine come URL,
+        //è solo questo che fa vedere l'immagine come anteprima
         reader.readAsDataURL(file);
     }
 
@@ -35,16 +39,10 @@ input.addEventListener("change", function(){
     }
 
     function addListeners(reader) {
-        reader.addEventListener('loadstart', handleEvent);
         reader.addEventListener('load', handleEvent);
-        reader.addEventListener('loadend', handleEvent);
-        reader.addEventListener('progress', handleEvent);
-        reader.addEventListener('error', handleEvent);
-        reader.addEventListener('abort', handleEvent);
     }
 
     function handleSelected(e) {
-        eventLog.textContent = '';
         const selectedFile = fileInput.files[0];
         if (selectedFile) {
             addListeners(reader);
