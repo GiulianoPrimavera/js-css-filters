@@ -1,3 +1,6 @@
+
+//******************************************************************
+//*qui metto la gestione dell'inserimento del file e della visualizzazione della foto in anteprima
 //! questa è la soluzione di #CodingNepal
 const defaultInput = document.getElementById("default_input");
 const customInput = document.getElementById("custom_input");
@@ -33,6 +36,10 @@ defaultInput.addEventListener("change", function(){
         reader.readAsDataURL(file);
     }
 })
+
+//******************************************************************
+//*qui metto i controlli per gli input range
+
 //! qui dentro c'è la soluzione di developer mozzilla
 /* 
     const fileInput = document.querySelector('input[type="file"]');
