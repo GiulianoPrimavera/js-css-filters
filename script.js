@@ -1,9 +1,14 @@
 //! questa è la soluzione di #CodingNepal
-const input = document.getElementById("input");
+const defaultInput = document.getElementById("default_input");
+const customInput = document.getElementById("custom_input");
 const image = document.querySelector("img.preview");
 
+function correctButton(){
+    defaultInput.click();
+}
+
 //ascolto quando cambia l'input
-input.addEventListener("change", function(){
+defaultInput.addEventListener("change", function(){
     //recupero il file inserito dentro l'input
     const file = this.files[0];    
 
@@ -23,8 +28,6 @@ input.addEventListener("change", function(){
         //è solo questo che fa vedere l'immagine come anteprima
         reader.readAsDataURL(file);
     }
-
-    
 })
 //! qui dentro c'è la soluzione di developer mozzilla
 /* 
@@ -51,4 +54,6 @@ input.addEventListener("change", function(){
     }
 
     fileInput.addEventListener('change', handleSelected);
- */
+*/
+
+

@@ -18,8 +18,6 @@
     <!-- font -->
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
 </head>
 <body>
 
@@ -32,10 +30,21 @@
 
                 </div>
 
-                <input id="input" type="file">
+                <div class="buttons_container">
+
+                    <input id="default_input" type="file" hidden>
+                    <button id="custom_input" onclick="correctButton()">
+                        scegli immagine
+                    </button>
+
+                    <button>
+                        rimuovi foto
+                    </button>
+                </div>
             </div>
         </div>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
