@@ -39,45 +39,21 @@ defaultInput.addEventListener("change", function(){
 
 //******************************************************************
 //*qui metto i controlli per gli input range
-const grayscaleInput = document.querySelector("#grayscale");
-grayscaleInput.addEventListener("change", function(){    
-    image.style.filter += `grayscale(${grayscaleInput.value}%)`;
-});
 
-const saturateInput = document.querySelector("#saturate");
-saturateInput.addEventListener("change", function(){
-    image.style.filter += `saturate(${saturateInput.value}%)`;
-});
+//recupero tutti gli input
+const filterControls = document.querySelectorAll("input[type=range]");
+function applyFilter(){
+    //creo una variabile per i filtri aggiunti
+    let computedFilters = "";
 
-const sepiaInput = document.querySelector("#sepia");
-sepiaInput.addEventListener("change", function(){
-    image.style.filter += `sepia(${sepiaInput.value}%)`;
-});
+    //per ogni filtro aggiunto (al cambiamento di un singolo), lo aggiungo ai coomputed filters
+    filterControls.forEach(element => {
+        computedFilters += element.getAttribute("data-filter") + "(" + element.value + element.getAttribute("data-scale") + ") ";
+        //aggiungo tutti i computed filters allo stile della immagine
+        image.style.filter = computedFilters;
+    })
+}
 
-const invertInput = document.querySelector("#invert");
-invertInput.addEventListener("change", function(){
-    image.style.filter += `invert(${invertInput.value}%)`;
-});
-
-const contrastInput = document.querySelector("#contrast");
-contrastInput.addEventListener("change", function(){
-    image.style.filter += `contrast(${contrastInput.value}%)`;
-});
-
-const brightnessInput = document.querySelector("#brightness");
-brightnessInput.addEventListener("change", function(){
-    image.style.filter += `brightness(${brightnessInput.value}%)`;
-});
-
-const blurInput = document.querySelector("#blur");
-blurInput.addEventListener("change", function(){
-    image.style.filter += `blur(${blurInput.value}px)`;
-});
-
-const hueRotateInput = document.querySelector("#hue_rotate");
-hueRotateInput.addEventListener("change", function(){
-    image.style.filter += `hue-rotate(${hueRotateInput.value}deg)`;
-});
 //! qui dentro c'è la soluzione di developer mozzilla
 /* 
     const fileInput = document.querySelector('input[type="file"]');

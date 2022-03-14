@@ -51,50 +51,50 @@
                 <!-- GRAYSCALE -->
                 <div class="single_range">
                     <label for="grayscale">grayscale</label>
-                    <input type="range" value="0" value="0" id="grayscale">
+                    <input onchange="applyFilter()" type="range" value="0" id="grayscale" data-filter="grayscale" data-scale="%">
                 </div>
 
                 <!-- SATURATE -->
                 <div class="single_range">
                     <label for="saturate">saturate</label>
-                    <input type="range" value="100" id="saturate">
+                    <input onchange="applyFilter()" type="range" value="100" id="saturate" data-filter="saturate" data-scale="%">
                 </div>
 
                 
                 <!-- SEPIA -->
                 <div class="single_range">
                     <label for="sepia">sepia</label>
-                    <input type="range" value="0" id="sepia">
+                    <input onchange="applyFilter()" type="range" value="0" id="sepia" data-filter="sepia" data-scale="%">
                 </div>
 
                 <!-- INVERT -->
                 <div class="single_range">
                     <label for="invert">invert</label>
-                    <input type="range" value="0" id="invert">
+                    <input onchange="applyFilter()" type="range" value="0" id="invert"  data-filter="invert" data-scale="%">
                 </div>
 
                 <!-- CONTRAST -->
                 <div class="single_range">
                     <label for="contrast">contrast</label>
-                    <input type="range" value="100" id="contrast">
+                    <input onchange="applyFilter()" type="range" value="100" id="contrast" data-filter="contrast" data-scale="%">
                 </div>
                 
                 <!-- BRIGHTNESS -->
                 <div class="single_range">
                     <label for="brightness">brightness</label>
-                    <input type="range" value="100" id="brightness">
+                    <input onchange="applyFilter()" type="range" value="100" id="brightness" data-filter="brightness" data-scale="%">
                 </div>
                 
                 <!-- BLUR -->
                 <div class="single_range">
                     <label for="blur">blur</label>
-                    <input type="range" value="0" min="0" max="5" id="blur">
+                    <input onchange="applyFilter()" type="range" value="0" min="0" max="5" id="blur" data-filter="blur" data-scale="px">
                 </div>
                 
                 <!-- HUE ROTATE -->
                 <div class="single_range">
                     <label for="hue_rotate">hue rotate</label>
-                    <input type="range" value="0" min="0" max="360" id="hue_rotate">
+                    <input onchange="applyFilter()" type="range" value="0" min="0" max="360" id="hue_rotate" data-filter="hue-rotate" data-scale="deg">
                 </div>
             </div>
         </div>
