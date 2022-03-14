@@ -11,7 +11,7 @@ function correctButton(){
 }
 
 function removeImage(){
-    image.src = "";
+    location.reload();
 }
 
 //ascolto quando cambia l'input
