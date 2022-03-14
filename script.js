@@ -8,6 +8,11 @@ const image = document.querySelector("img.preview");
 
 function correctButton(){
     defaultInput.click();
+
+    image.style.display = "inline-block";
+
+    let uploadIcon = document.querySelector(".image_inner_container > i");
+    uploadIcon.style.display = "none";
 }
 
 function removeImage(){
